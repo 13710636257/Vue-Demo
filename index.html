@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximun-scale=1.0,initial-scale=1.0,user-scalable=no" />
+		<title>vue实战</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+		<script src="https://cdn.bootcss.com/vue-router/2.4.0/vue-router.js"></script>
+		<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+		<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+		
+	</head>
+	<body>
+		<div id="app">
+			<div class="footer">
+				<ul>
+					<li>
+						<router-link to="/" class="tab-item" active-class="active" exact>
+							购物车
+						</router-link>
+					</li>
+					<li>
+						<router-link to="/todolist" active-class="active" exact>人员管理</router-link>
+					</li>
+					<li>
+						<router-link to="/tad" active-class="active" exact>Tab切换功能</router-link>
+					</li>
+					<li>
+						<router-link to="/vuexs" active-class="active" exact>VUEX</router-link>
+					</li>
+				</ul>
+			</div>
+			
+			<!--渲染组件，缺一不可-->
+			<router-view></router-view>
+			
+		</div>
+		
+		
+		<script src="js/shopCart.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="js/shopCart(1).js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="js/TodoList.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript">
+			//定义路由组件
+//			var shopcart = {
+//				template:"<p>这是购物车</p>"
+//			}
+//			var orderlist = {
+//				template:"<p>这是列表内容</p>"
+//			}
+			var tad = {
+				template:"<p>这是Tab切换</p>"
+			}
+			var vuexs = {
+				template:"<p>这是VUEX</p>"
+			}
+			
+			//定义路由
+			var routes = [
+				{path:'/',component: shopcart},
+				{path:'/todolist',component: todolist},
+				{path:'/tad',component: tad},
+				{path:'/vuexs',component: vuexs}
+			]
+			
+			var router = new VueRouter({
+				routes
+			})
+			
+			var app = new Vue({
+				
+				router
+			}).$mount('#app')
+			
+			
+		</script>
+	</body>
+</html>

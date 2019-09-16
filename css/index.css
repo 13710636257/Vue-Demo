@@ -1,0 +1,151 @@
+body {
+	padding: 0.2rem;
+}
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 0.85rem;
+	border-top: 1px solid #eee;
+	
+}
+.footer ul {
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.footer ul li {
+	width: 25%;
+	height: 100%;
+	line-height: 0.85rem;
+	text-align: center;
+}
+.footer ul li a {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	color: plum;
+}
+.footer ul li .active {
+    color: #fff;
+    background: #D2235A;
+}
+.flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/*购物车*/
+.goods {
+	
+	width: 90%;
+	padding: 0.2rem;
+	margin: 0.1rem auto;
+	border: 0.01rem solid #EEEEEE;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	border-radius: 0.14rem;
+	font-size: 0.25rem;
+}
+.title {
+	padding: 0.2rem;
+	font-size: 0.28rem;
+	font-weight: 600;
+}
+.goods img {
+	width: 1.25rem;
+	height: 1.25rem;
+	border-radius: 0.14rem;
+	margin: 0 0.1rem;
+}
+.goods .detail-list {
+	width: 68%;
+	line-height: 0.38rem;
+}
+.goods .detail-list h2 {
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+ .total {
+	width: 100%;
+	padding: 0.2rem;
+	line-height: 0.45rem;
+	border-top: 0.01rem solid #eee;
+	position: fixed;
+	left: 0;
+	bottom:0.85rem;
+}
+
+/*人员管理列表*/
+.people-list{
+	text-align: center;
+}
+
+.inp-text input{
+	width: 75%;
+	height: 0.55rem;
+	border: 1px solid #eee;
+	padding-left: 0.1rem;
+}
+.inp-text button{
+	width: 20%;
+	height: 0.6rem;
+	background: #D2235A;
+	color: #fff;
+	border: none;
+	
+}
+
+.people-list ul li {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 0.15rem 0;
+	height: 0.45rem;
+	line-height: 0.45rem;
+	list-style: none;
+	border-bottom: 1px solid red;
+	margin-top: 0.1rem;
+	
+}
+.people-list ul li .name {
+	width:60%;
+	text-align: left;
+}
+
+.people-list .wrap {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+/*剧中一个浮动元素*/
+ .people-list .content {
+	  width:5rem; 
+	  height:3rem;
+      margin: -1.5rem 0 0 -2.5rem;
+      position:relative;         
+      left:50%;
+      top:50%;
+}
+ .people-list .content input {
+       width: 90%;
+       padding-left: 0.2rem;
+       height: 0.65rem;
+}
+ .people-list .content button {
+    width: 1.5rem;
+    height: 0.65rem;
+    margin-top:0.2rem;
+    background: green;
+    border: none;
+    color: #fff;
+ }
