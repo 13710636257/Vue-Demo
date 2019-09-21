@@ -82,7 +82,6 @@ var shopcart = {
 			}
 			return total.toString().replace(/\B(?=(\d{3})+$)/g, ',');
 		}
-
 	},
 	
 	watch: { //使用watch来响应数据的变化
