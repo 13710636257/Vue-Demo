@@ -9,6 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="css/index.css"/>
 		<script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
 		<script src="https://cdn.bootcss.com/vue-router/2.4.0/vue-router.js"></script>
+		<script src="https://cdn.bootcss.com/vuex/3.1.0/vuex.js"></script>
 		<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
 		<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
 		
@@ -29,7 +30,7 @@
 						<router-link to="/tad" active-class="active" exact>Tab切换功能</router-link>
 					</li>
 					<li>
-						<router-link to="/vuexs" active-class="active" exact>VUEX</router-link>
+						<router-link to="/shopLists" active-class="active" exact>VUEX</router-link>
 					</li>
 				</ul>
 			</div>
@@ -41,39 +42,35 @@
 		
 		
 		<script src="js/shopCart.js" type="text/javascript" charset="utf-8"></script>
-		<!--<script src="js/shopCart(1).js" type="text/javascript" charset="utf-8"></script>-->
 		<script src="js/TodoList.js" type="text/javascript" charset="utf-8"></script>
+		<script src="VuexShopCart.js" type="text/javascript" charset="utf-8"></script>
+		
 		
 		<script type="text/javascript">
 			//定义路由组件
-//			var shopcart = {
-//				template:"<p>这是购物车</p>"
-//			}
-//			var orderlist = {
-//				template:"<p>这是列表内容</p>"
-//			}
 			var tad = {
 				template:"<p>这是Tab切换</p>"
 			}
-			var vuexs = {
-				template:"<p>这是VUEX</p>"
-			}
-			
 			//定义路由
 			var routes = [
 				{path:'/',component: shopcart},
 				{path:'/todolist',component: todolist},
 				{path:'/tad',component: tad},
-				{path:'/vuexs',component: vuexs}
+				{path:'/shopLists',component: shopLists}
 			]
 			
 			var router = new VueRouter({
 				routes
 			})
 			
+
 			var app = new Vue({
+				store,
+				router,
+				mounted(){
+					this.$store.dispatch('loadGoods');
+				}
 				
-				router
 			}).$mount('#app')
 			
 			
