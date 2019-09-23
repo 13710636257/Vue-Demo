@@ -45,21 +45,20 @@
 		<script src="js/TodoList.js" type="text/javascript" charset="utf-8"></script>
 		<script src="VuexShopCart.js" type="text/javascript" charset="utf-8"></script>
 		
-		
 		<script type="text/javascript">
 			//定义路由组件
-			var tad = {
+			const tad = {
 				template:"<p>这是Tab切换</p>"
 			}
 			//定义路由
-			var routes = [
+			const routes = [
 				{path:'/',component: shopcart},
 				{path:'/todolist',component: todolist},
 				{path:'/tad',component: tad},
 				{path:'/shopLists',component: shopLists}
 			]
 			
-			var router = new VueRouter({
+			const router = new VueRouter({
 				routes
 			})
 			
